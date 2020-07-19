@@ -109,16 +109,21 @@ def partition_function(jmatrix):
 
 #length and time for the lattice 
 L,T=4,2  
-# x-positions of vertices, y-positions of vertices, adjacency matrix
+# x-positions of vertices, y-positions of vertices, adjacency matrix for triagular lattice
 basisx,basisy,adjmatrix = trnglr_lattice(L,T)
-# database of the edges in the format:
+
+# database of the edges is in the format:
 # [index,vertex1,vertex2,c1,cc1,c2,cc2]
 database = list_edges(adjmatrix)
+
 # visualize the lattice with labels for edges and vertices
 visualize(database,basisx,basisy)
-# -- partition function using direct calculation
+
+# jmatrix -- matrix of couplings, generate randomly for all edges
 jmatrix = random_couplings(adjmatrix)
+# computing partition 
 Z = partition_function(jmatrix)
+print Z
 
 
         
