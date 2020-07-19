@@ -26,19 +26,19 @@ def trnglr_lattice(L,T):
     basisy = np.repeat(np.arange(T),np.tile([L,L-1],int(T/2)))
     #--------------------------------------------------------------------------
     X,Y = np.meshgrid(basisx,basisy)
-    Adjmatrix =  AND(X-X.T==1,Y-Y.T==0)
-    Adjmatrix += AND(X-X.T==0,np.abs(Y-Y.T)==1)
-    Adjmatrix += (X-X.T)*(Y-Y.T)==1-2*(Y%2)
-    Adjmatrix = np.triu(Adjmatrix)
-    Adjmatrix += Adjmatrix.T
-    return basisx,basisy,Adjmatrix
+    adjmatrix =  AND(X-X.T==1,Y-Y.T==0)
+    adjmatrix += AND(X-X.T==0,np.abs(Y-Y.T)==1)
+    adjmatrix += (X-X.T)*(Y-Y.T)==1-2*(Y%2)
+    adjmatrix = np.triu(adjmatrix)
+    adjmatrix += adjmatrix.T
+    return basisx,basisy,adjmatrix
 
-def list_edges(Adjmatrix):
-    S = len(Adjmatrix)
+def list_edges(adjmatrix):
+    S = len(adjmatrix)
     edges = []
     for i in range(S):
         for j in range(i+1,S):
-            if Adjmatrix[i][j]!=0:
+            if adjmatrix[i][j]!=0:
                 edges = add([i,j],edges)
     E = len(edges)
     database = np.zeros([E,7],int)
@@ -47,35 +47,35 @@ def list_edges(Adjmatrix):
         database[i][1:3] = edges[i]
         #---------------------------------------
         vertex = edges[i][0]
-        NN = np.arange(S)[Adjmatrix[vertex]]
-        NNidx, NNang = np.zeros(len(NN),int),np.zeros(len(NN))
-        for s in range(len(NN)):
-            NNidx[s] = np.arange(E)[OR(AND(edges.T[0]==vertex,edges.T[1]==NN[s]),AND(edges.T[1]==vertex,edges.T[0]==NN[s]))][0]
-            n = np.array([basisx[NN[s]]-basisx[vertex],basisy[NN[s]]-basisy[vertex]])
-            NNang[s] = angle(n)
-        NNidx = NNidx[np.argsort(NNang)]
-        indx0 = np.arange(len(NNidx))[NNidx==i][0]
-        database[i][3],database[i][4] = NNidx[(indx0+1)%len(NNidx)],NNidx[(indx0-1)%len(NNidx)]
+        nn = np.arange(S)[adjmatrix[vertex]]
+        nnidx, nnang = np.zeros(len(nn),int),np.zeros(len(nn))
+        for s in range(len(nn)):
+            nnidx[s] = np.arange(E)[OR(AND(edges.T[0]==vertex,edges.T[1]==nn[s]),AND(edges.T[1]==vertex,edges.T[0]==nn[s]))][0]
+            n = np.array([basisx[nn[s]]-basisx[vertex],basisy[nn[s]]-basisy[vertex]])
+            nnang[s] = angle(n)
+        nnidx = nnidx[np.argsort(nnang)]
+        indx0 = np.arange(len(nnidx))[nnidx==i][0]
+        database[i][3],database[i][4] = nnidx[(indx0+1)%len(nnidx)],nnidx[(indx0-1)%len(nnidx)]
         #---------------------------------------
         vertex = edges[i][1]
-        NN = np.arange(S)[Adjmatrix[vertex]]
-        NNidx, NNang = np.zeros(len(NN),int),np.zeros(len(NN))
-        for s in range(len(NN)):
-            NNidx[s] = np.arange(E)[OR(AND(edges.T[0]==vertex,edges.T[1]==NN[s]),AND(edges.T[1]==vertex,edges.T[0]==NN[s]))][0]
-            n = np.array([basisx[NN[s]]-basisx[vertex],basisy[NN[s]]-basisy[vertex]])
-            NNang[s] = angle(n)
-        NNidx = NNidx[np.argsort(NNang)]
-        indx0 = np.arange(len(NNidx))[NNidx==i][0]
-        database[i][5],database[i][6] = NNidx[(indx0+1)%len(NNidx)],NNidx[(indx0-1)%len(NNidx)]
+        nn = np.arange(S)[adjmatrix[vertex]]
+        nnidx, nnang = np.zeros(len(nn),int),np.zeros(len(nn))
+        for s in range(len(nn)):
+            nnidx[s] = np.arange(E)[OR(AND(edges.T[0]==vertex,edges.T[1]==nn[s]),AND(edges.T[1]==vertex,edges.T[0]==nn[s]))][0]
+            n = np.array([basisx[nn[s]]-basisx[vertex],basisy[nn[s]]-basisy[vertex]])
+            nnang[s] = angle(n)
+        nnidx = nnidx[np.argsort(nnang)]
+        indx0 = np.arange(len(nnidx))[nnidx==i][0]
+        database[i][5],database[i][6] = nnidx[(indx0+1)%len(nnidx)],nnidx[(indx0-1)%len(nnidx)]
     return database
 
 def visualize(database,basisx,basisy):
-    for i in range(len(Adjmatrix)):
-        for j in range(i+1,len(Adjmatrix)):
-            if Adjmatrix[i][j]!=0:
+    for i in range(len(adjmatrix)):
+        for j in range(i+1,len(adjmatrix)):
+            if adjmatrix[i][j]!=0:
                 plt.plot([basisx[i]+0.5*(basisy[i]%2),basisx[j]+0.5*(basisy[j]%2)],[basisy[i],basisy[j]],c='k')
     plt.axis('off')
-    for i in range(len(Adjmatrix)):
+    for i in range(len(adjmatrix)):
         plt.text(basisx[i]+0.5*(basisy[i]%2)-0.05,basisy[i]+0.1,str(i))
     for k in range(len(database)):
         i,j = database[k][1:3]
@@ -83,26 +83,26 @@ def visualize(database,basisx,basisy):
     
 #=====================================================================================================================================
 # generate random couplings from adjacency matrix
-def random_couplings(Adjmatrix):
-    Jmatrix = np.zeros([len(Adjmatrix),len(Adjmatrix)])
-    for i in range(len(Adjmatrix)):
-        for j in range(i+1,len(Adjmatrix)):
-            if Adjmatrix[i][j]!=0:
-                Jmatrix[i,j] = 0.5*np.random.normal(0,1)
-                Jmatrix[j,i] = Jmatrix[i,j]
-    return Jmatrix
+def random_couplings(adjmatrix):
+    jmatrix = np.zeros([len(adjmatrix),len(adjmatrix)])
+    for i in range(len(adjmatrix)):
+        for j in range(i+1,len(adjmatrix)):
+            if adjmatrix[i][j]!=0:
+                jmatrix[i,j] = 0.5*np.random.normal(0,1)
+                jmatrix[j,i] = jmatrix[i,j]
+    return jmatrix
 
 # basis of classical spins
 def spin_basis(num_sites):
     full_basis = np.array(list(itertools.product([-1,1], repeat=num_sites))) 
     return full_basis
 
-def partition_function(Jmatrix):
-    basis = spin_basis(len(Jmatrix))
+def partition_function(jmatrix):
+    basis = spin_basis(len(jmatrix))
     Z = 0
     for si in range(len(basis)):
         vec = basis[si]
-        Z += np.exp(-np.dot(vec,np.dot(Jmatrix,vec)))
+        Z += np.exp(-np.dot(vec,np.dot(jmatrix,vec)))
     return Z
 
 #======================================================================================================================================
@@ -110,15 +110,15 @@ def partition_function(Jmatrix):
 #length and time for the lattice 
 L,T=4,2  
 # x-positions of vertices, y-positions of vertices, adjacency matrix
-basisx,basisy,Adjmatrix = trnglr_lattice(L,T)
+basisx,basisy,adjmatrix = trnglr_lattice(L,T)
 # database of the edges in the format:
 # [index,vertex1,vertex2,c1,cc1,c2,cc2]
-database = list_edges(Adjmatrix)
+database = list_edges(adjmatrix)
 # visualize the lattice with labels for edges and vertices
 visualize(database,basisx,basisy)
 # -- partition function using direct calculation
-Jmatrix = random_couplings(Adjmatrix)
-Z = partition_function(Jmatrix)
+jmatrix = random_couplings(adjmatrix)
+Z = partition_function(jmatrix)
 
 
         
