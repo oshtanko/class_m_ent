@@ -1,10 +1,14 @@
 # planar_ising
-Code associated with paper: Classical Models of Entanglement in Monitored Random Circuits" Oles Shtanko, Yaroslav A. Kharkov, Luis Pedro García-Pintos, Alexey V. Gorshkov (2020) arXiv:2004.06736
-
+Code associated with paper: "Classical Models of Entanglement in Monitored Random Circuits" Oles Shtanko, Yaroslav A. Kharkov, Luis Pedro García-Pintos, Alexey V. Gorshkov (2020) arXiv:2004.06736 (now in progress of resubmission)
 
 # Introduction
 ## Data
-AggData*.csv for * in {Drinks, DairyPart1, DairyPart2, NonEdible, Snacks} contains anonymized grocery sales data from a food distributor. The grocery items are sold at 8 different sites, via 2 different channels (Collection, Delivery), in the years 2012-2017. Using catalog descriptions, we organize the products into a tree (see example below)
+
+The code used to replicate the results in the paper. 
+
+The structure of Ising triangular lattice can be replicated using the function 
+
+
 ![Figure_1 copy](https://user-images.githubusercontent.com/21160786/56327155-1b4b4200-6147-11e9-8837-694417ae332b.png)
 
 To preserve the distributor's anonymity, we replaced the names of the nodes at Level 2 and below by numbers (for Drinks Level 3 and below) by numbers. We also added lags of sales and prices.  The resulting data set takes the form:
