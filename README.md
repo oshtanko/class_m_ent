@@ -33,7 +33,7 @@ This command
 
 ```python /planar_ising/generate_collapse_plot.py```
 
-saves the figure below to ```/planar_ising/figures/collapse.png``` and outputs the values of critical parameters.
+saves the figure below to ```/planar_ising/figures/collapse.png``` and outputs the values of the critical parameters.
 
 ![collapse](https://user-images.githubusercontent.com/35434445/100168407-2fad0000-2e8f-11eb-9eaa-f7ba5dc3fb8e.png)
 
