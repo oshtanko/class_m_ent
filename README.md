@@ -18,7 +18,7 @@ Input arguments:
  
 This command
 
-```python generate_lattice_plot.py Lph=10 Tph=10 p=0.5```
+```python3 generate_lattice_plot.py Lph=10 Tph=10 p=0.5```
 
 saves the figure below to ```/planar_ising/figures/lattice.png```
 
@@ -31,7 +31,7 @@ The resulting lattice shows different couplings for the corresponding effective 
 
 This command 
 
-```python generate_collapse_plot.py```
+```python3 generate_collapse_plot.py```
 
 saves the figure below to ```/planar_ising/figures/collapse.png``` and outputs the values of the critical parameters.
 
@@ -43,7 +43,7 @@ The left panel shows the dependence of Renyi entropy as function of measurement 
 
 This command 
 
-```python generate_precision_plot.py```
+```python3 generate_precision_plot.py```
 
 saves the figure below to ```/planar_ising/figures/precision.png```
 
