@@ -1,9 +1,9 @@
 # planar_ising
-Code associated with the paper: "Classical Models of Entanglement in Monitored Random Circuits", Oles Shtanko, Yaroslav A. Kharkov, Luis Pedro García-Pintos, Alexey V. Gorshkov (2020) arXiv:2004.06736 (in the progress of resubmission).
+Code associated with the paper: "Classical Models of Entanglement in Monitored Random Circuits," Oles Shtanko, Yaroslav A. Kharkov, Luis Pedro García-Pintos, Alexey V. Gorshkov (2020) arXiv:2004.06736 (in the progress of resubmission).
 
 # Description
 
-This code is used to replicate the results of the paper. The code implements algorithms to compute annealed average Renyi entropy using (a) Monte Carlo method and (b) partition function method (for corresponding planar Ising model). Dependensies: the code requires installed packages Numpy >= 1.19.2, Scipy >=0.19.1, and Matplotlib >=3.3.2.
+This code is used to replicate the results of the paper. The code implements algorithms to compute annealed average Renyi entropy using (a) Monte Carlo method and (b) partition function method (for corresponding planar Ising model). Dependencies: the code requires installed packages Numpy >= 1.19.2, Scipy >=0.19.1, and Matplotlib >=3.3.2.
 
 ## Lattice structure
 
@@ -13,7 +13,7 @@ The result (for a random measurement configuration) is illustrated below:
 
 ![lattice](https://user-images.githubusercontent.com/35434445/100168282-f5436300-2e8e-11eb-8a9e-394e57539748.png)
 
-The resulting lattice shows different couplings for the corresponding classical Ising model. The lattice size can be modified in the file using parameters Lph (physical length/number of qubits) and Tph (physical time/circuit depth), and measurement rate $p$. The program automatically recalculates corresponding lattice dimensions and marks the specific couplings. The arrangement measurements can be manually accessed by changing the boolean array "meas".
+The resulting lattice shows different couplings for the corresponding classical Ising model. The lattice size can be modified in the file using parameters Lph (physical length/number of qubits) and Tph (physical time/circuit depth), and measurement rate $p$. The program automatically recalculates corresponding lattice dimensions and marks the specific couplings. The arrangement measurements can be manually accessed by changing the boolean array "meas."
 
 ## Collapse plot
 
