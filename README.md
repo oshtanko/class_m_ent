@@ -37,7 +37,7 @@ saves the figure below to ```/planar_ising/figures/collapse.png``` and outputs t
 
 ![collapse](https://user-images.githubusercontent.com/35434445/100168407-2fad0000-2e8f-11eb-9eaa-f7ba5dc3fb8e.png)
 
-The rigght panes shows the dependence of Renyi entropy as function of measurement probability $p$. The curves collapse (on the right) is used to derive the critical point $p_c$ and the critical exponent $\nu$. The evaluated critical parameters are printed upon running the file. More samples can be generated and stored upon setting the parameter ```samples``` to any float number. The parameter ```overwrite```, if ```True```, resets the data files and starts sampling from scratch.
+The left panel shows the dependence of Renyi entropy as function of measurement probability $p$. The curves collapse (on the right) is used to derive the critical point $p_c$ and the critical exponent $\nu$. The evaluated critical parameters are printed upon running the file. More samples can be generated and stored upon setting the parameter ```samples``` to any float number. The parameter ```overwrite```, if ```True```, resets the data files and starts sampling from the beginning.
 
 ## Precision plot
 
