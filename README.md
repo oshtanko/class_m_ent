@@ -18,7 +18,7 @@ Input arguments:
  
 This command
 
-```python  /planar_ising/generate_lattice_plot.py Lph=1 Tph=2 p=3```
+```python  /planar_ising/generate_lattice_plot.py Lph=10 Tph=10 p=0.5```
 
 saves the figure below to ```/planar_ising/figures/lattice.png```
 
