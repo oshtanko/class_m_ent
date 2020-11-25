@@ -31,7 +31,7 @@ The resulting lattice shows different couplings for the corresponding effective 
 
 This command 
 
-```/planar_ising/generate_collapse_plot.py```
+```python /planar_ising/generate_collapse_plot.py```
 
 saves the figure below to ```/planar_ising/figures/collapse.png```
 
