@@ -1,5 +1,5 @@
 # planar_ising
-Code associated with the paper: "Classical Models of Entanglement in Monitored Random Circuits," Oles Shtanko, Yaroslav A. Kharkov, Luis Pedro García-Pintos, Alexey V. Gorshkov (2020) arXiv:2004.06736 (in the progress of resubmission).
+Code associated with the paper: "Classical Models of Entanglement in Monitored Random Circuits," Oles Shtanko, Yaroslav A. Kharkov, Luis Pedro García-Pintos, Alexey V. Gorshkov (2020) arXiv:2004.06736 (in the progress of preparing for resubmission).
 
 # Description
 
