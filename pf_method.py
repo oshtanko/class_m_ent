@@ -162,7 +162,7 @@ def generate_lattice_couplings(L,T,meas,G,beta,q=2,plot=False,ax=[]):
         show_lattice(ax,J_matrix_display== G1+G2,L,T,col='violet',label=r'$\Gamma_1+\Gamma_2$')
         show_lattice(ax,J_matrix_display==+G2,L,T,col='violet',label=r'$\Gamma_2$')
         show_lattice(ax,AND(K_matrix,NOT(edges_5 + edges_6)!=0),L,T,col='k',ls='--',label=r'$0$')
-        #plt.legend(loc='best',markerscale=None,ncol=3)
+        plt.legend(loc=(0.005*L,-0.1),ncol=3,numpoints=None)
         plt.ylim(-T-1,0.1)
     
     # 12 -- adding regularization
@@ -172,16 +172,6 @@ def generate_lattice_couplings(L,T,meas,G,beta,q=2,plot=False,ax=[]):
     return J_matrix1,J_matrix2
 
 def add_measurements(meas,J_matrix,L,T,G1,J_eff):
-    
-    # =============================================================================
-    #   
-    #     
-    #     
-    #     
-    #     
-    #     
-    #     
-    # =============================================================================
     
     Lph,Tph = len(meas.T),len(meas)
     K_matrix = 0*J_matrix
@@ -218,13 +208,17 @@ def show_lattice(ax,adj_matrix,L,T,col='k',ls='-',label=''):
     basis_x = np.tile(np.arange(L),T)
     basis_y = np.repeat(np.arange(T),L)
     X,Y = np.meshgrid(basis_x,basis_y)
-    s=1
+    s,m_indc=1,1
     for i in range(len(adj_matrix)):
         for j in range(i+1,len(adj_matrix)):
             if adj_matrix[i,j]:
-               #if adj_matrix[i,j] not in link_database:
+               if m_indc==1:
+                   ax.plot([0,0],[0,0],c=col,ls=ls,markersize=None,label=label)
+                   m_indc=0
                ax.plot([basis_x[i]-0.5*s*(basis_y[i]%2),basis_x[j]-0.5*s*(basis_y[j]%2)],[-basis_y[i],-basis_y[j]],c=col
-                      ,ls=ls,markersize=6,marker='o',mfc='w',mec='k')#,label=label)
+                      ,ls=ls,markersize=6,marker='o',mfc='w',mec='k')
+               
+                   
     ax.axis('off')    
     return 0
 
