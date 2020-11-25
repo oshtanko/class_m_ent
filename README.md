@@ -25,7 +25,7 @@ saves the figure below to ```/planar_ising/figures/lattice.png```
 
 ![lattice](https://user-images.githubusercontent.com/35434445/100168282-f5436300-2e8e-11eb-8a9e-394e57539748.png)
 
-The resulting lattice shows different couplings for the corresponding classical Ising model. The lattice size can be modified in the file using parameters`. The program automatically recalculates corresponding lattice dimensions and marks the specific couplings. The arrangement measurements can be manually accessed by changing the boolean array ```meas``` .
+The resulting lattice shows different couplings for the corresponding classical Ising model. The lattice size can be modified in the file using parameters. The program automatically recalculates corresponding lattice dimensions and marks the specific couplings. The arrangement measurements can be manually accessed by changing the boolean array ```meas``` .
 
 ## Collapse plot
 
@@ -36,7 +36,7 @@ The result is demonstrated below:
 
 ![collapse](https://user-images.githubusercontent.com/35434445/100168407-2fad0000-2e8f-11eb-9eaa-f7ba5dc3fb8e.png)
 
-The order parameter system-size scaling can be used to derive the critical point $p_c$ and the critical exponent $\nu$. The evaluated critical parameters are printed upon running the file. More samples can be generated and stored upon setting the parameter "samples" to any float number. The parameter "overwrite", if True, resets the data files and starts sampling from scratch.
+The order parameter system-size scaling can be used to derive the critical point $p_c$ and the critical exponent $\nu$. The evaluated critical parameters are printed upon running the file. More samples can be generated and stored upon setting the parameter ```samples``` to any float number. The parameter ```overwrite```, if ```True```, resets the data files and starts sampling from scratch.
 
 ## Precision plot
 
@@ -46,7 +46,7 @@ The result is demonstrated below:
 
 ![precision](https://user-images.githubusercontent.com/35434445/100168588-8c101f80-2e8f-11eb-8008-7b8c80f2cb4b.png)
 
-The first plot demonstrates how quickly the value of entropy saturates as parameter G increases in the limit in Eq. (S.63) of the Supplement. The circuit is of size Lph = L and depth Tph = L. The second plot illustrates the error's decay with an increase of G by comparing it to the Monte Carlo simulation result. The dashed line shows the asymptotics of the exponential error suppression. The third graph illustrates the error caused by insufficient digital precision of G. For this plot, it follows that the digital precision should grow at least as O(L). The parameter "overwrite", if True, resets the data files and starts sampling from scratch.
+The first plot demonstrates how quickly the value of entropy saturates as parameter G increases in the limit in Eq. (S.63) of the Supplement. The circuit is of size ```Lph``` = L and depth ```Tph``` = L. The second plot illustrates the error's decay with an increase of ```G``` by comparing it to the Monte Carlo simulation result. The dashed line shows the asymptotics of the exponential error suppression. The third graph illustrates the error caused by insufficient digital precision of ```G```. For this plot, it follows that the digital precision should grow at least as O(L). The parameter ```overwrite```, if True, resets the data files and starts sampling from scratch.
 
 # References:
 
