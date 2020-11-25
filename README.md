@@ -24,7 +24,7 @@ saves the figure below to ```/classical_models_of_entanglement/figures/lattice.p
 
 ![lattice](https://user-images.githubusercontent.com/35434445/100183496-16b34780-2ead-11eb-834f-c11409cb65f9.png)
 
-The resulting lattice shows different couplings for the corresponding effective classical Ising model. The lattice size can be modified in the file using parameters. The program automatically recalculates corresponding lattice dimensions and marks the specific couplings. The arrangement measurements can be manually accessed by changing the boolean array ```meas```.
+The resulting lattice shows different couplings for the corresponding effective classical Ising model. The lattice size can also be modified in the file using parameters. The program automatically recalculates corresponding lattice dimensions and marks the specific couplings. The arrangement measurements can be manually accessed by changing the boolean array ```meas```.
 
 ## Collapse plot
 
