@@ -38,5 +38,6 @@ The first plot demonstrates how quickly the value of entropy saturates as parame
 # References:
 
 Shtanko, O., Kharkov, Y.A., García-Pintos, L.P. and Gorshkov, A.V. Classical models of entanglement in monitored random circuits. https://arxiv.org/abs/2004.06736
+
 Loh, Y.L. and Carlson, E.W. Efficient algorithm for random-bond Ising models in 2d. Phys. Rev. Lett., 97(22), p.227205 (2006)
 
