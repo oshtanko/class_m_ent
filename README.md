@@ -9,18 +9,18 @@ This code contains the algorithms to compute annealed average Renyi entropy usin
 
 Input arguments:
 
- ```Lph```  -- physical length/number of qubits 
+ ```Lph```  -- physical length (number of qubits) 
  
- ```Tph```  -- physical time/circuit depth
+ ```Tph```  -- physical time (circuit depth)
  
- ```p```     --  measurement rate 
+ ```p```     --  measurement probability 
  
  
 This command
 
 ```python  /planar_ising/generate_lattice_plot.py Lph=1 Tph=2 p=3```
 
-saves the figure below to ```/planar_ising/Figures/Lattice.png```
+saves the figure below to ```/planar_ising/figures/lattice.png```
 
 
 ![lattice](https://user-images.githubusercontent.com/35434445/100168282-f5436300-2e8e-11eb-8a9e-394e57539748.png)
