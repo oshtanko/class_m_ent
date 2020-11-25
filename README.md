@@ -33,7 +33,7 @@ The result is demonstrated below:
 
 ![precision](https://user-images.githubusercontent.com/35434445/100168588-8c101f80-2e8f-11eb-8008-7b8c80f2cb4b.png)
 
-The first plot demonstrates how quickly the value of entropy saturates as parameter $\Gamma$ increases in the limit in Eq. (S.63) of the Supplement. The circuit is of size Lph = L and depth Tph = L. The second plot illustrates the error's decay with an increase of $Gamma$ by comparing it to the Monte Carlo simulation result. The dashed line shows the asymptotics of the exponential error suppression. The third graph illustrates the error caused by insufficient digital precision of $\Gamma$. For this plot, it follows that the digital precision should grow at least as O(L). The parameter "overwrite", if True, resets the data files and starts sampling from scratch.
+The first plot demonstrates how quickly the value of entropy saturates as parameter $\Gamma$ increases in the limit in Eq. (S.63) of the Supplement. The circuit is of size Lph = L and depth Tph = L. The second plot illustrates the error's decay with an increase of $Gamma$ by comparing it to the Monte Carlo simulation result. The dashed line shows the asymptotics of the exponential error suppression. The third graph illustrates the error caused by insufficient digital precision of $G$. For this plot, it follows that the digital precision should grow at least as O(L). The parameter "overwrite", if True, resets the data files and starts sampling from scratch.
 
 # References:
 
