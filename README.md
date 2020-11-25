@@ -1,4 +1,4 @@
-# classical_models_of_entanglement
+# class_m_ent
 Code associated with the paper: "Classical Models of Entanglement in Monitored Random Circuits," Oles Shtanko, Yaroslav A. Kharkov, Luis Pedro García-Pintos, Alexey V. Gorshkov (2020) arXiv:2004.06736.
 
 # Description
@@ -20,7 +20,7 @@ This command
 
 ```python3 generate_lattice_plot.py Lph=10 Tph=10 p=0.5```
 
-saves the figure below to ```/classical_models_of_entanglement/figures/lattice.png```
+saves the figure below to ```/class_m_ent/figures/lattice.png```
 
 ![lattice](https://user-images.githubusercontent.com/35434445/100183496-16b34780-2ead-11eb-834f-c11409cb65f9.png)
 
@@ -32,7 +32,7 @@ This command
 
 ```python3 generate_collapse_plot.py```
 
-saves the figure below to ```/classical_models_of_entanglement/figures/collapse.png``` and outputs the values of the critical parameters.
+saves the figure below to ```/class_m_ent/figures/collapse.png``` and outputs the values of the critical parameters.
 
 ![collapse](https://user-images.githubusercontent.com/35434445/100168407-2fad0000-2e8f-11eb-9eaa-f7ba5dc3fb8e.png)
 
@@ -44,7 +44,7 @@ This command
 
 ```python3 generate_precision_plot.py```
 
-saves the figure below to ```/classical_models_of_entanglement/figures/precision.png```
+saves the figure below to ```/class_m_ent/figures/precision.png```
 
 ![precision](https://user-images.githubusercontent.com/35434445/100168588-8c101f80-2e8f-11eb-8008-7b8c80f2cb4b.png)
 
