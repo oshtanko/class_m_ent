@@ -3,7 +3,7 @@ Code associated with the paper: "Classical Models of Entanglement in Monitored R
 
 # Description
 
-This code contains the algorithms to compute circuit-average Renyi entropy using (a) Monte Carlo method and (b) partition function method (for corresponding planar Ising model). Dependencies: the code requires Python 3 and installed packages Numpy >= 1.19.2, Scipy >=0.19.1, and Matplotlib >=3.3.2.
+This code contains the algorithms to compute circuit-average Renyi entropy using (a) Monte Carlo method and (b) partition function method (for corresponding planar Ising model). Dependencies: the code requires Python >3.3 and installed packages Numpy >= 1.19.2, Scipy >=0.19.1, and Matplotlib >=3.3.2.
 
 ## Lattice structure for Ising model
 
