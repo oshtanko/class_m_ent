@@ -37,7 +37,7 @@ saves the figure below to ```/planar_ising/figures/collapse.png```
 
 ![collapse](https://user-images.githubusercontent.com/35434445/100168407-2fad0000-2e8f-11eb-9eaa-f7ba5dc3fb8e.png)
 
-The order parameter system-size scaling can be used to derive the critical point $p_c$ and the critical exponent $\nu$. The evaluated critical parameters are printed upon running the file. More samples can be generated and stored upon setting the parameter ```samples``` to any float number. The parameter ```overwrite```, if ```True```, resets the data files and starts sampling from scratch.
+The entanglement entropy system-size scaling is used to derive the critical point $p_c$ and the critical exponent $\nu$. The evaluated critical parameters are printed upon running the file. More samples can be generated and stored upon setting the parameter ```samples``` to any float number. The parameter ```overwrite```, if ```True```, resets the data files and starts sampling from scratch.
 
 ## Precision plot
 
