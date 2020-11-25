@@ -22,8 +22,7 @@ This command
 
 saves the figure below to ```/planar_ising/figures/lattice.png```
 
-
-![lattice](https://user-images.githubusercontent.com/35434445/100168282-f5436300-2e8e-11eb-8a9e-394e57539748.png)
+![lattice](https://user-images.githubusercontent.com/35434445/100180600-7eb25f80-2ea6-11eb-9edd-3dd9df8e3ddf.png)
 
 The resulting lattice shows different couplings for the corresponding effective classical Ising model. The lattice size can be modified in the file using parameters. The program automatically recalculates corresponding lattice dimensions and marks the specific couplings. The arrangement measurements can be manually accessed by changing the boolean array ```meas``` .
 
