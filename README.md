@@ -49,7 +49,7 @@ saves the figure below to ```/planar_ising/figures/precision.png```
 
 ![precision](https://user-images.githubusercontent.com/35434445/100168588-8c101f80-2e8f-11eb-8008-7b8c80f2cb4b.png)
 
-The leftmost plot demonstrates how quickly the value of entropy saturates as the gap parameter ```G``` ($\Gamma$) increases in the limit in Eq. (S.63) of the Supplement. The circuit is of size ```Lph``` = L and depth ```Tph``` = L. The center plot illustrates the error's decay with an increase of ```G``` by comparing it to the Monte Carlo simulation result. The dashed lines show the asymptotics of the exponential error suppression. The rightmost graph illustrates the error caused by insufficient digital precision of ```G```. For this plot, it follows that the digital precision should grow at least as O(L). The parameter ```overwrite```, if ```True```, resets the data files and starts sampling from scratch.
+The leftmost plot demonstrates how quickly the value of entropy saturates as the gap parameter ```G``` ($\Gamma$) increases saturating to the limit $\Gamma\to\infty$ in Eq. (S.63) of the Supplement. The circuit is of size ```Lph``` = L and depth ```Tph``` = L. The center plot illustrates the error's decay with an increase of ```G``` by comparing it to the Monte Carlo simulation result. The dashed lines show the asymptotics of the exponential error suppression. The rightmost graph illustrates the error caused by insufficient digital precision of ```G```. For this plot, it follows that the digital precision should grow at least as O(L). The parameter ```overwrite```, if ```True```, resets the data files and starts sampling from scratch.
 
 # References:
 
