@@ -1,9 +1,9 @@
 #from __future__ import division 
 import numpy as np
 from pf_method import entropy_pf
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from storage.files import savedata,loaddata,exist
-from numpy import logical_and as AND
+#from numpy import logical_and as AND
 from filters.savitzky_golay import savitzky_golay
 from scipy.optimize import minimize as fmin
 
